@@ -1,15 +1,14 @@
 package ui;
 
-import model.Tournament;
-import model.Club;
-import model.Match;
-import model.Player;
-import model.Result;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
+import java.com.footballtournament.domain.model.Club;
+import java.com.footballtournament.domain.model.Match;
+import java.com.footballtournament.domain.model.Player;
+import java.com.footballtournament.domain.model.Result;
+import java.com.footballtournament.domain.model.Tournament;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
@@ -41,8 +40,9 @@ public class TournamentUI {
     }
 
     // EFFECTS: add club to a tournament
-    //          if no tournament exists, user has to add the tournament before moving on to the add Club function
-    //          if a tournament exists, add the club with its details
+    // if no tournament exists, user has to add the tournament before moving on to
+    // the add Club function
+    // if a tournament exists, add the club with its details
     public void addclub() {
         if (tournament == null) {
             System.out.println("No tournament created. Please create a tournament first!");
@@ -55,8 +55,8 @@ public class TournamentUI {
     }
 
     // EFFECTS: add player to a club in a tournament
-    //          a tournament and a club must exist for the user to be able to add player
-    //          otherwise, add a tournament and a club first
+    // a tournament and a club must exist for the user to be able to add player
+    // otherwise, add a tournament and a club first
     public void addPlayerToClub() {
         if (tournament == null) {
             System.out.println("No tournament created. Please create a tournament first!");
@@ -87,7 +87,8 @@ public class TournamentUI {
         System.out.println("Player added: " + name);
     }
 
-    // EFFECTS: record a match result, assume that a tournament and 2 clubs have already existed
+    // EFFECTS: record a match result, assume that a tournament and 2 clubs have
+    // already existed
     public void recordMatchResult() {
         if (tournament == null) {
             System.out.println("No tournament created. Please create a tournament first!");
@@ -116,8 +117,9 @@ public class TournamentUI {
         System.out.println("Match result recorded!");
     }
 
-    // EFFECTS: view the details of a tournament (name, participating clubs, match results), 
-    //          assume that a tournament has already been created
+    // EFFECTS: view the details of a tournament (name, participating clubs, match
+    // results),
+    // assume that a tournament has already been created
     public void viewTournamentDetails() {
         if (tournament == null) {
             System.out.println("No tournament created. Please create a tournament first!");

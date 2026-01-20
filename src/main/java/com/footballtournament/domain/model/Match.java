@@ -1,4 +1,4 @@
-package model;
+package java.com.footballtournament.domain.model;
 
 import org.json.JSONObject;
 
@@ -6,7 +6,7 @@ import org.json.JSONObject;
 // used to hold the match. Assume that every match in the tournament is placed at either the homeClub or the awayClub's 
 // stadium
 public class Match {
-    
+
     private Club homeClub;
     private Club awayClub;
     private String stadium;

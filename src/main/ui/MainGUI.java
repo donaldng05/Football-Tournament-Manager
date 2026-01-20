@@ -13,15 +13,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.com.footballtournament.domain.model.Club;
+import java.com.footballtournament.domain.model.Player;
+import java.com.footballtournament.domain.model.Tournament;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import model.Club;
 import model.Event;
 import model.EventLog;
-import model.Player;
-import model.Tournament;
 import persistence.JsonReader;
 import persistence.JsonWriter;
 

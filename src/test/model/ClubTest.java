@@ -3,6 +3,8 @@ package model;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.com.footballtournament.domain.model.Club;
+import java.com.footballtournament.domain.model.Player;
 import java.util.ArrayList;
 
 import org.json.JSONArray;

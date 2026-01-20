@@ -1,4 +1,4 @@
-package model;
+package java.com.footballtournament.domain.model;
 
 import java.util.List;
 import java.util.HashMap;

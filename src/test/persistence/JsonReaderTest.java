@@ -3,6 +3,11 @@ package persistence;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import java.com.footballtournament.domain.model.Club;
+import java.com.footballtournament.domain.model.Match;
+import java.com.footballtournament.domain.model.Player;
+import java.com.footballtournament.domain.model.Result;
+import java.com.footballtournament.domain.model.Tournament;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,12 +15,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.Test;
-
-import model.Club;
-import model.Match;
-import model.Player;
-import model.Result;
-import model.Tournament;
 
 public class JsonReaderTest extends JsonTest {
     @Test

@@ -2,15 +2,14 @@ package ui;
 
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
+import java.com.footballtournament.domain.model.Club;
+import java.com.footballtournament.domain.model.Player;
 
 import javax.swing.DefaultListModel;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
-
-import model.Club;
-import model.Player;
 
 // The ClubDetailsPanel class displays details of a club and its players in a panel
 public class ClubDetailsPanel extends JPanel {
@@ -61,7 +60,7 @@ public class ClubDetailsPanel extends JPanel {
         continentalChampionsLabel.setText("Continental Champions: " + club.getcontinentalChampions());
 
         DefaultListModel<String> listModel = new DefaultListModel<>();
-        for (Player player: club.getplayers()) {
+        for (Player player : club.getplayers()) {
             listModel.addElement(player.getname() + " - " + player.getposition() + " - " + player.getnationality());
         }
         playerList.setModel(listModel);

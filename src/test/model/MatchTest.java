@@ -6,6 +6,8 @@ import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.com.footballtournament.domain.model.Club;
+import java.com.footballtournament.domain.model.Match;
 import java.util.ArrayList;
 
 public class MatchTest {

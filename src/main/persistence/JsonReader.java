@@ -1,7 +1,12 @@
 package persistence;
 
-import model.*;
+// import model.*;
 
+import java.com.footballtournament.domain.model.Club;
+import java.com.footballtournament.domain.model.Match;
+import java.com.footballtournament.domain.model.Player;
+import java.com.footballtournament.domain.model.Result;
+import java.com.footballtournament.domain.model.Tournament;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
@@ -23,7 +28,7 @@ public class JsonReader {
     }
 
     // EFFECTS: reads tournament from file and returns it;
-    //          throws IOException if an error occurs reading data from file
+    // throws IOException if an error occurs reading data from file
     public Tournament read() throws IOException {
         String jsonData = readFile(source);
         JSONObject json = new JSONObject(jsonData);
@@ -49,7 +54,8 @@ public class JsonReader {
         return new Tournament(name, participatingClubs, clubPoints, matchResults);
     }
 
-    // EFFECTS: parses participatingClubs from JSON array, adds them to a list of participating participatingClubs and 
+    // EFFECTS: parses participatingClubs from JSON array, adds them to a list of
+    // participating participatingClubs and
     // returns the list
     public List<Club> parseparticipatingClubs(JSONArray jsonArray) {
         List<Club> participatingClubs = new ArrayList<>();
@@ -62,13 +68,14 @@ public class JsonReader {
             int domesticChampions = json.getInt("domesticChampions");
             int continentalChampions = json.getInt("continentalChampions");
             List<Player> players = parsePlayers(json.getJSONArray("players"));
-            participatingClubs.add(new Club(name, year, president, stadium, domesticChampions, continentalChampions, 
+            participatingClubs.add(new Club(name, year, president, stadium, domesticChampions, continentalChampions,
                     players));
         }
         return participatingClubs;
     }
 
-    // EFFECTS: parses players from JSON array, adds them to a list of players and returns the list
+    // EFFECTS: parses players from JSON array, adds them to a list of players and
+    // returns the list
     public List<Player> parsePlayers(JSONArray jsonArray) {
         List<Player> players = new ArrayList<>();
         for (int i = 0; i < jsonArray.length(); i++) {
@@ -82,10 +89,11 @@ public class JsonReader {
         return players;
     }
 
-    // EFFECTS: parses club points from JSON object and returns a map of participatingClubs with their earned points
+    // EFFECTS: parses club points from JSON object and returns a map of
+    // participatingClubs with their earned points
     public Map<Club, Integer> parseClubPoints(JSONObject jsonObject, List<Club> participatingClubs) {
         Map<Club, Integer> clubPoints = new HashMap<>();
-        for (Club club: participatingClubs) {
+        for (Club club : participatingClubs) {
             String name = club.getName();
             if (jsonObject.has(name)) {
                 clubPoints.put(club, jsonObject.getInt(name));
@@ -94,7 +102,8 @@ public class JsonReader {
         return clubPoints;
     }
 
-    // EFFECTS: parses match results from a JSON array and returns a map of matches to their results
+    // EFFECTS: parses match results from a JSON array and returns a map of matches
+    // to their results
     public Map<Match, Result> parseMatchResults(JSONArray jsonArray, List<Club> participatingClubs) {
         Map<Match, Result> matchResults = new HashMap<>();
         for (int i = 0; i < jsonArray.length(); i++) {
@@ -113,7 +122,7 @@ public class JsonReader {
 
     // EFFECTS: finds club by its name
     public Club findClubByName(List<Club> participatingClubs, String name) {
-        for (Club club: participatingClubs) {
+        for (Club club : participatingClubs) {
             if (club.getName().equals(name)) {
                 return club;
             }

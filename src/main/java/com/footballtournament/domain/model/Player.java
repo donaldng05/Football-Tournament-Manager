@@ -1,4 +1,4 @@
-package model;
+package java.com.footballtournament.domain.model;
 
 import org.json.JSONObject;
 

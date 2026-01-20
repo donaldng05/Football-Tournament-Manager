@@ -2,11 +2,10 @@ package persistence;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.com.footballtournament.domain.model.Tournament;
 import java.io.File;
 
 import org.json.*;
-
-import model.Tournament;
 
 // Represents a writer that writes JSON representation of tournament to file
 public class JsonWriter {
@@ -20,7 +19,8 @@ public class JsonWriter {
     }
 
     // MODIFIES: this
-    // EFFECTS: opens writer, throws FileNotFoundException if destination file cannot
+    // EFFECTS: opens writer, throws FileNotFoundException if destination file
+    // cannot
     // be opened for writing
     public void open() throws FileNotFoundException {
         writer = new PrintWriter(new File(destination));

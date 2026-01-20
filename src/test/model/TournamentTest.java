@@ -8,6 +8,10 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.com.footballtournament.domain.model.Club;
+import java.com.footballtournament.domain.model.Match;
+import java.com.footballtournament.domain.model.Result;
+import java.com.footballtournament.domain.model.Tournament;
 import java.util.ArrayList;
 import java.util.HashMap;
 

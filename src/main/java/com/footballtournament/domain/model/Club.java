@@ -1,9 +1,12 @@
-package model;
+package java.com.footballtournament.domain.model;
 
 import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import model.Event;
+import model.EventLog;
 
 // the Club class represents a football club with its name, its year of foundation, its current president, its current
 // stadium, its number of domestic and continental league titles won (both of which can be incremented by 1 after a
@@ -15,8 +18,8 @@ public class Club {
     private int yearOfFoundation;
     private String currentPresident;
     private String currentStadium;
-    private int domesticChampions; 
-    private int continentalChampions; 
+    private int domesticChampions;
+    private int continentalChampions;
     private List<Player> players;
 
     public Club(String name, int yearOfFoundation, String currentPresident, String currentStadium,
@@ -100,7 +103,7 @@ public class Club {
     // EFFECTS: return a list of players to a JSON array
     public JSONArray playersToJson() {
         JSONArray jsonArray = new JSONArray();
-        for (Player player: players) {
+        for (Player player : players) {
             jsonArray.put(player.toJson());
         }
         return jsonArray;

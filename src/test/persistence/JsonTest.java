@@ -2,13 +2,12 @@ package persistence;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.com.footballtournament.domain.model.Club;
+import java.com.footballtournament.domain.model.Match;
+import java.com.footballtournament.domain.model.Player;
+import java.com.footballtournament.domain.model.Result;
+import java.com.footballtournament.domain.model.Tournament;
 import java.util.List;
-
-import model.Club;
-import model.Match;
-import model.Player;
-import model.Result;
-import model.Tournament;
 
 public class JsonTest {
     protected void checkTournament(String name, Tournament tournament) {

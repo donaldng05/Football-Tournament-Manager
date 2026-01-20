@@ -1,6 +1,6 @@
 package model;
 
-import static org.junit.Assert.assertNotNull;
+// import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -38,7 +38,8 @@ public class EventTest {
         assertEquals(calendarExpected.get(Calendar.HOUR_OF_DAY), calendarActual.get(Calendar.HOUR_OF_DAY));
         assertEquals(calendarExpected.get(Calendar.MINUTE), calendarActual.get(Calendar.MINUTE));
         assertEquals(calendarExpected.get(Calendar.SECOND), calendarActual.get(Calendar.SECOND));
-        // assertEquals(calendarExpected.get(Calendar.MILLISECOND), calendarActual.get(Calendar.MILLISECOND));
+        // assertEquals(calendarExpected.get(Calendar.MILLISECOND),
+        // calendarActual.get(Calendar.MILLISECOND));
 
         // assertEquals(date, event.getDate());
     }
@@ -61,7 +62,7 @@ public class EventTest {
 
     // @Test
     // public void testHashCode() {
-    //     Event sameEvent = new Event(event.getDescription());
-    //     assertEquals(event.hashCode(), sameEvent.hashCode());
+    // Event sameEvent = new Event(event.getDescription());
+    // assertEquals(event.hashCode(), sameEvent.hashCode());
     // }
 }
